@@ -2,6 +2,7 @@ import PokemonCard from "./componements/PokemonCard";
 import "./App.css";
 import { useState } from "react";
 import NavBar from "./componements/NavBar";
+import { useEffect } from "react";
 
 const App = () => {
   const pokemonList = [
@@ -25,6 +26,10 @@ const App = () => {
       name: "mew",
     },
   ];
+
+  useEffect(() => {
+    alert("hello pokemon trainer :)");
+  }, []);
 
   const [pokemonIndex, setPokemonIndex] = useState(0);
   const handleClick = (index) => {
